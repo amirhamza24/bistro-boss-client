@@ -13,7 +13,7 @@ const CheckoutForm = ({ price }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect( () => {
-        axiosSecure.post('/create_payment_intent', {price})
+        axiosSecure.post('/create-payment-intent', {price})
         .then(res => {
             console.log(res.data.clientSecret)
             setClientSecret(res.data.clientSecret);
